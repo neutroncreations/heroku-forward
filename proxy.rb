@@ -20,7 +20,7 @@ class Proxy
       # Handle every request in another thread
       loop do
         s = @socket.accept
-        puts "Connection Accepted."
+        # puts "Connection Accepted."
         Thread.new s, &method(:handle_request)
       end
 
@@ -85,7 +85,8 @@ class Proxy
     to_client.close
     to_server.close
   rescue EOFError => e
-    puts e.message
+    # puts e.message
+    return
   end
 
 end
