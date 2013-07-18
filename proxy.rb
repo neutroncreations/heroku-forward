@@ -11,12 +11,14 @@ require 'uri'
 class Proxy
   def run port
     begin
+      puts "Starting up..."
       # Start our server to handle connections (will raise things on errors)
       @socket = TCPServer.new port
 
       # Handle every request in another thread
       loop do
         s = @socket.accept
+        puts "Connection Accepted."
         Thread.new s, &method(:handle_request)
       end
 
@@ -80,8 +82,8 @@ class Proxy
     # Close the sockets
     to_client.close
     to_server.close
-  rescue EOFError
-    return
+  rescue EOFError => e
+    puts e.message
   end
 
 end
