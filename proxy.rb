@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
-# A quick and dirty implementation of an HTTP proxy server in Ruby
-# because I did not want to install anything.
 #
-# Copyright (C) 2009 Torsten Becker <torsten.becker@gmail.com>
+# Based on https://gist.github.com/torsten/74107 and modified to work with Heroku
+#
 
 require 'socket'
 require 'uri'
