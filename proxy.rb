@@ -7,7 +7,7 @@
 require 'socket'
 require 'uri'
 
-STDOUT.sync = true
+$stdout.sync = true
 
 
 class Proxy
