@@ -17,8 +17,7 @@ class Proxy
       # Handle every request in another thread
       loop do
         s = @socket.accept
-        # Thread.new s, &method(:handle_request)
-        handle_request s
+        Thread.new s, &method(:handle_request)
       end
 
     # CTRL-C
@@ -81,6 +80,8 @@ class Proxy
     # Close the sockets
     to_client.close
     to_server.close
+  rescue EOFError
+    return
   end
 
 end
