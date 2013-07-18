@@ -7,6 +7,8 @@
 require 'socket'
 require 'uri'
 
+STDOUT.sync = true
+
 
 class Proxy
   def run port
