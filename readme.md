@@ -1,6 +1,6 @@
 # Heroku Forward
 
-This is designed to allow you to provide access to your local development server over an SSL cert without having to faff around with SSL certs yourself thanks to Heroku's wildcard SSL certificate. You will still need to have a port opened and forwarded (if you're behind a NAT gateway) on the network you're running your development machine on - if you can't do that, consider trying [Forward](https://forwardhq.com).
+This is designed to allow you to provide access to your local development server over an SSL cert without having to faff around with SSL certs yourself thanks to Heroku's wildcard SSL certificate. You will still need to have a port opened and forwarded (if you're behind a NAT gateway) on the network you're running your development machine on - if you can't do that, consider trying [Forward](https://forwardhq.com) or [ngrok](https://ngrok.com/).
 
 ## Installation
 
